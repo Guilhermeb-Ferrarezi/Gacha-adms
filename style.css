@@ -125,8 +125,8 @@ h3 {
   border: 3px solid rgb(0, 225, 255); /* menor */
   border-radius: 10px;
   display: none;
-  width: 250px; /* menor */
-  height: 250px;
+  width: 300px; /* menor */
+  height: 300px;
   margin: 1.5rem auto 0 auto;
 }
 
@@ -173,7 +173,7 @@ h3 {
 
 #tela .conteudo {
   position: absolute;
-  width: 25rem; /* menor */
+  width: 30rem; /* menor */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -181,7 +181,7 @@ h3 {
   border-radius: 10px;
   color: white;
   text-align: center;
-  font-size: 16px; /* menor */
+  font-size: 24px; /* menor */
   padding: 2rem; /* menor */
   border: 3px solid transparent;
   background: linear-gradient(#353535, #353535) padding-box,
@@ -212,3 +212,4 @@ h3 {
 #Lendário { color: rgb(252, 216, 13); }
 #Mítico { color: red; }
 #Secreto { color: black; }
+
