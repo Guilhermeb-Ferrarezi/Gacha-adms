@@ -31,7 +31,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(0,0,0,0.3);
   padding: 2rem;
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
 }
 
@@ -125,8 +125,8 @@ h3 {
   border: 3px solid rgb(0, 225, 255); /* menor */
   border-radius: 10px;
   display: none;
-  width: 250px; /* menor */
-  height: 250px;
+  width: 350px; /* menor */
+  height: 300px;
   margin: 1.5rem auto 0 auto;
 }
 
@@ -173,7 +173,7 @@ h3 {
 
 #tela .conteudo {
   position: absolute;
-  width: 25rem; /* menor */
+  width: 30rem; /* menor */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -181,7 +181,7 @@ h3 {
   border-radius: 10px;
   color: white;
   text-align: center;
-  font-size: 16px; /* menor */
+  font-size: 24px; /* menor */
   padding: 2rem; /* menor */
   border: 3px solid transparent;
   background: linear-gradient(#353535, #353535) padding-box,
