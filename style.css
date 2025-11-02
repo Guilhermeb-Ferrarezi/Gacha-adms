@@ -1,28 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: Jetbrains Mono, monospace;
-    background-image: url(🎰.png);
+  font-family: Jetbrains mono, monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
+  background-image: url("🎰.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  display: flex;
+  justify-content: center; /* centraliza horizontal */
+  align-items: center;     /* centraliza vertical */
+  
+  width: 100vw;  /* garante largura total */
+  height: 100vh; /* garante altura total */
+  margin: 0;
+  padding: 0;    /* remove padding */
+  font-size: 18px;
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
 }
 
 h3 {
-    padding: 1rem;
+  margin: 15px;
 }
 
 .button-85 {
-  padding: 0.6em 2em;
+  font-size: 20px; /* menor */
+  padding: 0.6em 1.8em; /* mais compacto */
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
@@ -87,16 +106,109 @@ h3 {
   top: 0;
   border-radius: 10px;
 }
+
 @keyframes aumenta {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.15); }
+  0% { transform: scale(1); }
+  100% { transform: scale(1.15); }
 }
 
 @keyframes shrink {
-    from {transform: scale(1);}
-    to {transform: scale(1.15);}
+  from { transform: scale(1); }
+  to { transform: scale(1.15); }
 }
 
 .button-85:hover {
-    animation: aumenta 0.5s ease forwards;
+  animation: aumenta 0.4s ease forwards;
 }
+
+#gachaImagem {
+  border: 3px solid rgb(0, 225, 255); /* menor */
+  border-radius: 10px;
+  display: none;
+  width: 250px; /* menor */
+  height: 250px;
+  margin: 1.5rem auto 0 auto;
+}
+
+
+
+#informaçoes {
+  margin-top: 25px; /* menor */
+  font-size: medium;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 4px; /* menor */
+  cursor: pointer;
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+}
+
+.Pity {
+  text-align: left;
+  margin-top: 10px;
+  font-size: 22px; /* menor */
+}
+
+#tela {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(29, 28, 28, 0.8);
+}
+
+#tela .conteudo {
+  position: absolute;
+  width: 25rem; /* menor */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #353535;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  font-size: 16px; /* menor */
+  padding: 2rem; /* menor */
+  border: 3px solid transparent;
+  background: linear-gradient(#353535, #353535) padding-box,
+  linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+}
+
+#fechar {
+  margin-top: 15px;
+  padding: 4px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#Comum { color: green; }
+#Raro { color: #002bff; }
+#Épico { color: purple; }
+#Lendário { color: rgb(252, 216, 13); }
+#Mítico { color: red; }
+#Secreto { color: black; }
