@@ -8,7 +8,7 @@
 }
 
 body {
-  background-image: url("🎰.png");
+  background-image: url("Assets/🎰.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -212,3 +212,4 @@ h3 {
 #Lendário { color: rgb(252, 216, 13); }
 #Mítico { color: red; }
 #Secreto { color: black; }
+
