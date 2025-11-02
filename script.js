@@ -96,7 +96,7 @@ botao.addEventListener('click', () => {
 
     setTimeout(() => {
         podeClicar = true
-    }, 0)
+    }, 1000)
 })
 
 // --- tela de informações ---
@@ -111,3 +111,4 @@ informaçoes.addEventListener("click", () => {
 fechar.addEventListener("click", () => {
     tela.style.display = "none";
 });
+
