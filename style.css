@@ -18,7 +18,7 @@ body {
   align-items: center;     /* centraliza vertical */
   
   width: 100vw;  /* garante largura total */
-  height: 900vh; /* garante altura total */
+  height: 90vh; /* garante altura total */
   margin: 0;
   padding: 0;    /* remove padding */
   font-size: 18px;
