@@ -78,7 +78,7 @@ function abrirGacha_Pity() {
 }
 
 let pity = 0
-const raridades_altas = ['Lendário', 'Mítico', 'Secreto']
+const raridades_altas = ['Lendário', 'Mítico', 'Secreto', 'Os bolinha']
 
 botao.addEventListener('click', () => {
     if (!podeClicar) return
@@ -137,6 +137,7 @@ informacoes.addEventListener("click", () => {
 fechar.addEventListener("click", () => {
     tela.style.display = "none";
 });
+
 
 
 
