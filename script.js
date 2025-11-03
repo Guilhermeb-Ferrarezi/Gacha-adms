@@ -16,7 +16,8 @@ const images = [
     {src: 'Assets/Games_edu.png', rarity: 'Épico', nome: 'Games Edu'},
     {src: 'Assets/Ednaldo_base.png', rarity: 'Lendário', nome: 'Ednaldo Pereira base'},
     {src: 'Assets/Ednaldo_hunter.png', rarity: 'Mítico', nome: 'Ednaldo hunter hunter'},
-    {src: 'Assets/Mini_pekka.png', rarity: 'Secreto' , nome: 'Mini Pekka'}  
+    {src: 'Assets/Mini_pekka.png', rarity: 'Secreto' , nome: 'Mini Pekka'}
+    {src: 'Assets/Fruta.png', rarity: 'Os bolinha', nome: 'Alface, melância, maça'}
 ]
 
 const probabilidades = {
@@ -25,7 +26,8 @@ const probabilidades = {
     'Épico': 8.5,
     'Lendário': 1,
     'Mítico': 0.49,
-    'Secreto': 0.01
+    'Secreto': 0.01,
+    'Os bolinha': 0.00001
 }
 
 function getrarity() {
@@ -56,7 +58,8 @@ const probabilidades_pity = {
     'Épico': 25,
     'Lendário': 15,
     'Mítico': 10,
-    'Secreto': 5
+    'Secreto': 5,
+    'Os bolinha': 1.5
 }
 
 function getrarity_pity() {
@@ -134,5 +137,6 @@ informacoes.addEventListener("click", () => {
 fechar.addEventListener("click", () => {
     tela.style.display = "none";
 });
+
 
 
