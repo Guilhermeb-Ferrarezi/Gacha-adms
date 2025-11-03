@@ -213,3 +213,50 @@ h3 {
 #Mítico { color: red; }
 #Secreto { color: black; }
 
+.Aviso{
+  display: none;
+}
+
+#raridade_maior {
+  flex-direction: column;
+  font-size: 20px;
+  position: absolute;
+  width: 30rem; /* menor */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #353535;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  padding: 2rem; /* menor */
+  border: 3px solid transparent;
+  background: linear-gradient(#353535, #353535) padding-box,
+  linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+}
+
+#raridade_maior{
+  button{
+    align-items: center;
+    padding: 5px;
+    font-size: large;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
