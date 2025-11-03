@@ -118,7 +118,7 @@ botao.addEventListener('click', () => {
         }
 
     } else {
-        setTimeout(() => { podeClicar = true }, 10)
+        setTimeout(() => { podeClicar = true }, 1000)
     }
 })
 
