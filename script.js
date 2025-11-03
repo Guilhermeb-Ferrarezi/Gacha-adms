@@ -55,8 +55,8 @@ function abrirGacha(rarityOverride) {
 const probabilidades_pity = {
     'Comum': 1,
     'Raro': 4,
-    'Épico': 25,
-    'Lendário': 15,
+    'Épico': 0,
+    'Lendário': 10,
     'Mítico': 10,
     'Secreto': 5,
     'Os bolinha': 40
@@ -137,6 +137,7 @@ informacoes.addEventListener("click", () => {
 fechar.addEventListener("click", () => {
     tela.style.display = "none";
 });
+
 
 
 
