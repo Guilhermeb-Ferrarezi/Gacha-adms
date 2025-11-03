@@ -17,17 +17,17 @@ const images = [
     {src: 'Assets/Ednaldo_base.png', rarity: 'Lendário', nome: 'Ednaldo Pereira base'},
     {src: 'Assets/Ednaldo_hunter.png', rarity: 'Mítico', nome: 'Ednaldo hunter hunter'},
     {src: 'Assets/Mini_pekka.png', rarity: 'Secreto' , nome: 'Mini Pekka'},
-    {src: 'Assets/Fruta.png', rarity: 'Os bolinha', nome: 'Alface, melância, maça'}
+    {src: 'Assets/Frutas.png', rarity: 'Os bolinha', nome: 'Alface, melância, maça'}
 ]
 
 const probabilidades = {
-    'Comum': 60,
+    'Comum': 70,
     'Raro': 20,
     'Épico': 8.5,
     'Lendário': 1,
     'Mítico': 0.49,
     'Secreto': 0.01,
-    'Os bolinha': 10
+    'Os bolinha': 0.0001
 }
 
 function getrarity() {
@@ -55,11 +55,11 @@ function abrirGacha(rarityOverride) {
 const probabilidades_pity = {
     'Comum': 1,
     'Raro': 4,
-    'Épico': 0,
-    'Lendário': 10,
+    'Épico': 25,
+    'Lendário': 13.5,
     'Mítico': 10,
     'Secreto': 5,
-    'Os bolinha': 40
+    'Os bolinha': 1.5
 }
 
 function getrarity_pity() {
@@ -137,6 +137,7 @@ informacoes.addEventListener("click", () => {
 fechar.addEventListener("click", () => {
     tela.style.display = "none";
 });
+
 
 
 
