@@ -31,7 +31,7 @@ const probabilidades = {
 }
 
 function getrarity() {
-    const aleatorio = Math.random() * 100
+    const aleatorio = Math.random() * 101
     let cumulative = 0
     for (let key in probabilidades) {
         cumulative += probabilidades[key]
@@ -59,11 +59,11 @@ const probabilidades_pity = {
     'Lendário': 15,
     'Mítico': 10,
     'Secreto': 5,
-    'Os bolinha': 1.5
+    'Os bolinha': 40
 }
 
 function getrarity_pity() {
-    const aleatorio = Math.random() * 60
+    const aleatorio = Math.random() * 61.5
     let cumulative = 0
     for (let key in probabilidades_pity) {
         cumulative += probabilidades_pity[key]
@@ -137,6 +137,7 @@ informacoes.addEventListener("click", () => {
 fechar.addEventListener("click", () => {
     tela.style.display = "none";
 });
+
 
 
 
