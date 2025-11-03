@@ -16,7 +16,7 @@ const images = [
     {src: 'Assets/Games_edu.png', rarity: 'Épico', nome: 'Games Edu'},
     {src: 'Assets/Ednaldo_base.png', rarity: 'Lendário', nome: 'Ednaldo Pereira base'},
     {src: 'Assets/Ednaldo_hunter.png', rarity: 'Mítico', nome: 'Ednaldo hunter hunter'},
-    {src: 'Assets/Mini_pekka.png', rarity: 'Secreto' , nome: 'Mini Pekka'}
+    {src: 'Assets/Mini_pekka.png', rarity: 'Secreto' , nome: 'Mini Pekka'},
     {src: 'Assets/Fruta.png', rarity: 'Os bolinha', nome: 'Alface, melância, maça'}
 ]
 
@@ -137,6 +137,7 @@ informacoes.addEventListener("click", () => {
 fechar.addEventListener("click", () => {
     tela.style.display = "none";
 });
+
 
 
 
