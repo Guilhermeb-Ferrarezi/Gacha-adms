@@ -212,6 +212,7 @@ h3 {
 #Lendário { color: rgb(252, 216, 13); }
 #Mítico { color: red; }
 #Secreto { color: black; }
+#Os bolinha { color: red; }
 
 .Aviso{
   display: none;
@@ -260,6 +261,7 @@ h3 {
     cursor: pointer;
   }
 }
+
 
 
 
