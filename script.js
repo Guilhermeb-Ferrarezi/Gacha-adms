@@ -3,8 +3,11 @@ const img = document.getElementById('gachaImagem')
 const raridade = document.getElementById('RaridadeTexto')
 const nome = document.getElementById('nome')
 const texto = document.getElementById('Pity')
+const telaConfirm = document.getElementById('raridade_maior')
 
-let podeClicar = true;
+let podeClicar = true
+let bloqueadoRaridade = false
+let raridadeBloqueada = null
 
 const images = [
     {src: 'Assets/Cachorro_caramelo.jpg', rarity: 'Comum', nome: 'Cachorro Caramelo'},
@@ -33,10 +36,10 @@ function getrarity() {
         if (aleatorio <= cumulative) return key
     }
     return 'Comum'
-} 
+}
 
-function abrirGacha() {
-    const rarity = getrarity()
+function abrirGacha(rarityOverride) {
+    const rarity = rarityOverride || getrarity()
     const filtro = images.filter(item => item.rarity === rarity)
     const item = filtro[Math.floor(Math.random() * filtro.length)]
 
@@ -44,6 +47,7 @@ function abrirGacha() {
     img.style.display = 'block'
     nome.textContent = `Adm: ${item.nome}`
     raridade.textContent = `Raridade: ${item.rarity}`
+    return item.rarity
 }
 
 const probabilidades_pity = {
@@ -63,49 +67,68 @@ function getrarity_pity() {
         if (aleatorio <= cumulative) return key
     }
     return 'Comum'
-} 
+}
 
 function abrirGacha_Pity() {
     const rarity = getrarity_pity()
-    const filtro = images.filter(item => item.rarity === rarity)
-    const item = filtro[Math.floor(Math.random() * filtro.length)]
-
-    img.src = item.src
-    img.style.display = 'block'
-    nome.textContent = `Adm: ${item.nome}`
-    raridade.textContent = `Raridade: ${item.rarity}`
+    return abrirGacha(rarity)
 }
 
 let pity = 0
+const raridades_altas = ['Mítico', 'Secreto']
 
 botao.addEventListener('click', () => {
     if (!podeClicar) return
-
     podeClicar = false
+
+    if (bloqueadoRaridade) {
+        telaConfirm.style.display = "flex"
+        podeClicar = true
+        return
+    }
+
     pity++
     texto.textContent = `Pity: ${pity}/100`
 
-    // verifica se chegou no pity máximo
+    let rarity
     if (pity >= 100) {
-        abrirGacha_Pity()
-        pity = 0 // reseta o contador
+        rarity = abrirGacha_Pity()
+        pity = 0
         texto.textContent = `Pity: ${pity}/100`
     } else {
-        abrirGacha()
+        rarity = abrirGacha()
     }
 
-    setTimeout(() => {
-        podeClicar = true
-    }, 1000)
+    if (raridades_altas.includes(rarity)) {
+        telaConfirm.style.display = "flex"
+        bloqueadoRaridade = true
+        raridadeBloqueada = rarity
+
+        document.getElementById('botao_sim').onclick = () => {
+            abrirGacha()
+            telaConfirm.style.display = 'none'
+            bloqueadoRaridade = false
+            raridadeBloqueada = null
+            podeClicar = true
+        }
+
+        document.getElementById('botao_nao').onclick = () => {
+            telaConfirm.style.display = 'none'
+            podeClicar = true
+        }
+
+    } else {
+        setTimeout(() => { podeClicar = true }, 10)
+    }
 })
 
 // --- tela de informações ---
-const informaçoes = document.getElementById("informaçoes");
+const informacoes = document.getElementById("informaçoes");
 const tela = document.getElementById("tela");
 const fechar = document.getElementById("fechar");
 
-informaçoes.addEventListener("click", () => {
-    tela.style.display = "block";
+informacoes.addEventListener("click", () => {
+    tela.style.display = "flex";
 });
 
 fechar.addEventListener("click", () => {
