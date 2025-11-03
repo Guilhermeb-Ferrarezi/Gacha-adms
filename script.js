@@ -21,13 +21,13 @@ const images = [
 ]
 
 const probabilidades = {
-    'Comum': 70,
+    'Comum': 60,
     'Raro': 20,
     'Épico': 8.5,
     'Lendário': 1,
     'Mítico': 0.49,
     'Secreto': 0.01,
-    'Os bolinha': 0.00001
+    'Os bolinha': 10
 }
 
 function getrarity() {
@@ -137,6 +137,7 @@ informacoes.addEventListener("click", () => {
 fechar.addEventListener("click", () => {
     tela.style.display = "none";
 });
+
 
 
 
