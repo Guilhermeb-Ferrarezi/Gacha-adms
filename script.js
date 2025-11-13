@@ -121,7 +121,7 @@ botao.addEventListener('click', () => {
         }
 
     } else {
-        setTimeout(() => { podeClicar = true }, 1000)
+        setTimeout(() => { podeClicar = true }, 0)
     }
 })
 
@@ -137,6 +137,7 @@ informacoes.addEventListener("click", () => {
 fechar.addEventListener("click", () => {
     tela.style.display = "none";
 });
+
 
 
 
